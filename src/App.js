@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Players from './components/Players/Players';
+import { useState } from 'react';
+import { PlayerProvider } from './context/PlayerContext';
+import ContainerChilds from './components/ContainerChilds/ContainerChilds';
 
 function App() {
+  const [showPlayers, setShowPlayers] = useState(true);
+
+  const handleGoClick = () => {
+    setShowPlayers(false);
+  };
+
+  const handleGoClick2 = () => {
+    setShowPlayers(true);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PlayerProvider>
+      <div className="App">
+        {showPlayers && <Players onGoClick={handleGoClick} />}
+        {!showPlayers && <ContainerChilds onGoBackClick={handleGoClick2} />}
+      </div>
+    </PlayerProvider>
   );
 }
 

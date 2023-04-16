@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+.Players{
+    background-color: rgba(112, 120, 214, 0.685);
+    height: max-content;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.divPlayer{
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    background-color: rgb(83, 93, 207);
+    margin-bottom: 7px;
+    margin-top: 7px;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.buttonRemovePlayer{
+    background: linear-gradient(to bottom, #f44336, #c62828);
+    border: none;
+    border-radius:5px;
+    color: #fff;
+    padding: 7px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.liPlayer{
+    list-style: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.titleAdd{
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    margin-bottom: 5px;
+}
+
+
+.buttonAddGo{
+    margin-left: 4px;
+    margin-right: 4px;
+    background-color: #333;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
